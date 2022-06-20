@@ -10,20 +10,19 @@ export const scope = 'boilerplate.containers.HomePage';
 export default defineMessages({
   startProjectHeader: {
     id: `${scope}.start_project.header`,
-    defaultMessage: 'Start your next react project in seconds',
+    defaultMessage: "Hi, I'm Mark Wong.",
   },
   startProjectMessage: {
     id: `${scope}.start_project.message`,
-    defaultMessage:
-      'A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices',
+    defaultMessage: 'A fullstack web developer\nstudying in Singapore',
   },
   trymeHeader: {
     id: `${scope}.tryme.header`,
-    defaultMessage: 'Try me!',
+    defaultMessage: 'My Works',
   },
   trymeMessage: {
     id: `${scope}.tryme.message`,
-    defaultMessage: 'Show Github repositories by',
+    defaultMessage: 'I have built different projects with frameworks such as React, Angular and Vue',
   },
   trymeAtPrefix: {
     id: `${scope}.tryme.atPrefix`,

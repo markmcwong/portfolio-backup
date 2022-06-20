@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import Section from './Section';
 
-const CenteredSection = styled(Section)`
+const ExampleSection = styled(Section)`
   text-align: center;
-  height: 100vh;
+  /* min-height: 100vh; */
   width: 100vw;
-  background: #ff9d66;
+  background: #FFF;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0 !important;
 `;
 
-export default CenteredSection;
+export default ExampleSection;

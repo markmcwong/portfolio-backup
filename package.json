@@ -1,10 +1,11 @@
 {
   "name": "react-boilerplate",
+  "homepage": "https://markmcwong.github.io/",
   "version": "4.0.0",
   "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/markmcwong/markmcwong.github.io.git"
   },
   "engines": {
     "npm": ">=5",
@@ -13,6 +14,8 @@
   "author": "Max Stoiber",
   "license": "MIT",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "npm run analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
@@ -65,31 +68,35 @@
   },
   "dependencies": {
     "@babel/polyfill": "7.4.3",
+    "aos": "^2.3.4",
     "chalk": "^2.4.2",
     "compression": "1.7.4",
     "connected-react-router": "6.4.0",
     "cross-env": "5.2.0",
     "express": "4.16.4",
     "fontfaceobserver": "2.1.0",
+    "framer-motion": "^4.1.17",
     "history": "4.9.0",
     "hoist-non-react-statics": "3.3.0",
     "immer": "3.0.0",
     "intl": "1.2.5",
     "invariant": "2.2.4",
     "ip": "1.1.5",
-    "lodash": "4.17.11",
-    "minimist": "1.2.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-helmet": "6.0.0-beta",
+    "react-intersection-observer": "^8.32.0",
     "react-intl": "2.8.0",
     "react-redux": "7.0.2",
-    "react-router-dom": "5.0.0",
+    "react-router-dom": "^5.2.0",
     "redux": "4.0.1",
     "redux-saga": "1.0.2",
     "reselect": "4.0.0",
     "sanitize.css": "8.0.0",
+    "simple-icons": "^7.2.0",
     "styled-components": "4.2.0"
   },
   "devDependencies": {
@@ -103,6 +110,8 @@
     "@babel/preset-env": "7.4.3",
     "@babel/preset-react": "7.0.0",
     "@babel/register": "7.4.0",
+    "@iconify/icons-simple-icons": "^1.2.17",
+    "@iconify/react": "^3.2.2",
     "add-asset-html-webpack-plugin": "3.1.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
@@ -139,6 +148,7 @@
     "lint-staged": "8.1.5",
     "ngrok": "3.1.1",
     "node-plop": "0.18.0",
+    "node-sass": "^6.0.0",
     "null-loader": "0.1.1",
     "offline-plugin": "5.0.6",
     "plop": "2.3.0",
@@ -148,7 +158,8 @@
     "react-test-renderer": "16.8.6",
     "react-testing-library": "6.1.2",
     "rimraf": "2.6.3",
-    "shelljs": "^0.8.3",
+    "sass-loader": "^10",
+    "shelljs": "^0.8.4",
     "style-loader": "0.23.1",
     "stylelint": "10.0.1",
     "stylelint-config-recommended": "2.2.0",
@@ -161,7 +172,7 @@
     "webpack-cli": "3.3.0",
     "webpack-dev-middleware": "3.6.2",
     "webpack-hot-middleware": "2.24.3",
-    "webpack-pwa-manifest": "4.0.0",
+    "webpack-pwa-manifest": "^4.3.0",
     "whatwg-fetch": "3.0.0"
   }
 }

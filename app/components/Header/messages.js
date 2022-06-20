@@ -9,11 +9,11 @@ export const scope = 'boilerplate.components.Header';
 
 export default defineMessages({
   home: {
-    id: `${scope}.home`,
-    defaultMessage: 'Home',
+    id: `${scope}.Mark Wong`,
+    defaultMessage: 'Mark Wong',
   },
   features: {
-    id: `${scope}.features`,
-    defaultMessage: 'Features',
+    id: `${scope}.portfolio`,
+    defaultMessage: 'Portfolio',
   },
 });
