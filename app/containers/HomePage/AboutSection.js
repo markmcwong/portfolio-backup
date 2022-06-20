@@ -1,9 +1,12 @@
 import '!file-loader?name=[name].[ext]!../../images/me.jpeg';
 import '!file-loader?name=[name].[ext]!../../images/me.jpg';
 
+import { Icon } from '@iconify/react';
 import React from 'react';
 import Section from './Section';
 import Title from 'components/Title';
+import githubIcon from '@iconify/icons-simple-icons/github';
+import linkedinIcon from '@iconify/icons-simple-icons/linkedin';
 import styled from 'styled-components';
 
 const About = styled(Section)`
@@ -50,10 +53,10 @@ const AboutSection = () => {
           MORE ABOUT ME!
         </Title>
         <p style={{ fontFamily: 'Open Sans', fontSize: 24, fontWeight: 300 }}>
-          I was born in Hong Kong, grew up in UAE and now studying in Singapore!{' '}
-          <br />
-          For the last few years, I've worked for different sizes of web
-          projects using React + Redux, both remotely and in office environment.
+          I was born in Hong Kong and spent my childhood year there, then grew
+          up in UAE and now studying in Singapore! <br />
+          For the last few years, I've worked for different sizes of data
+          science and web/app projects, both remotely and in office environment.
           <br /> With experience also in:
         </p>
         <div className="aboutSection__experience">
@@ -68,7 +71,11 @@ const AboutSection = () => {
             }}
           >
             <div className="promise-number">1</div>
-            <a>Using GraphQL with React + Redux</a>
+            <a style={{ whiteSpace: 'pre-line' }}>
+              {
+                'Building and Integrating Apps with AWS Services\nincluding Lambda, S3, DynamoDB, AppSync, Textract, etc'
+              }
+            </a>
           </div>
           <div
             style={{
@@ -82,7 +89,11 @@ const AboutSection = () => {
             }}
           >
             <div className="promise-number">2</div>
-            <a>Deploying CI-CD systems (with Travis-CI, Jenkins)</a>
+            <a style={{ whiteSpace: 'pre-line' }}>
+              {
+                'Creating devOps pipelines using \ne.g. Travis-CI, Jenkins+Docker, AWS Amplify'
+              }
+            </a>
           </div>
           <div
             style={{
@@ -96,7 +107,7 @@ const AboutSection = () => {
             }}
           >
             <div className="promise-number">3</div>
-            <a>Developing mobile app in React Native and Flutter</a>
+            <a>Mobile App Development in React Native & Flutter</a>
           </div>
           <div
             style={{
@@ -109,20 +120,38 @@ const AboutSection = () => {
             }}
           >
             <div className="promise-number">4</div>
-            <a>
-              Designing user interfaces for mobile and web apps, with Figma,
-              Sketch and Photoshop
-            </a>
+            <a>UI/UX Design with Figma, Sketch & Photoshop</a>
           </div>
         </div>
       </div>
       <div className="column">
         <img
-          style={{ borderRadius: '50%', width: '25vw' }}
-          src="me.jpg"
+          style={{ borderRadius: '50%', width: '25vw', margin: 'auto' }}
+          src="me.jpeg"
           border="0"
           alt=""
         />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            width: '50%',
+            alignSelf: 'center',
+          }}
+        >
+          <Icon
+            onClick={() => window.open('https://linkedin.com/in/markmcwong')}
+            icon={linkedinIcon}
+            height={75}
+            style={{ margin: '25px' }}
+          />
+          <Icon
+            onClick={() => window.open('https://github.com/markmcwong')}
+            icon={githubIcon}
+            height={75}
+            style={{ margin: '25px' }}
+          />
+        </div>
       </div>
     </About>
   );

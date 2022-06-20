@@ -175,6 +175,7 @@ html {
     }
   }
   .aboutSection {
+    display: flex;
     flex-direction: column-reverse !important;
     p,
     div {
@@ -226,6 +227,7 @@ html {
     }
   }
   .aboutSection {
+    display: flex;
     flex-direction: column-reverse;
     .column {
       &:first-child {
@@ -521,4 +523,13 @@ html {
 .tooltip:hover .tooltipText {
   opacity: 1;
   transform: translateY(-10px);
+}
+
+.aboutSection {
+  .column {
+    &:nth-child(even) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
